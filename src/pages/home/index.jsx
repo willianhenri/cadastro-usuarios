@@ -12,8 +12,8 @@ function Home() {
 
   async function getUsers(){
     const usersFromApi = await api.get('/user')
-
-    setUsers(usersFromApi.data);
+    const activeUsers = usersFromApi.data.filter(user => !user.deleted);
+    setUsers(activeUsers.data);
   }
 
   async function createUsers(){
