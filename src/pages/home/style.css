@@ -5,7 +5,12 @@
   padding: 80px 20px; 
 }
 
-/* Responsividade */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 40px 15px;
